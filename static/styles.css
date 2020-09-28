@@ -1,0 +1,80 @@
+body {
+    font-family: sans-serif;
+    background: #182C61;
+}
+
+.default {
+    width: 350px;
+    height: 275px;
+    text-align: center;
+    background: #1e272e;
+    padding: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.default select {
+    font-size: 1em;
+    border-radius: 10px;    
+    outline: none;
+    background: none;
+    color: white;
+    border: 2px solid lightskyblue;
+    transition: 0.25s;
+}
+
+.default select:focus {
+    background: #55E6C1; 
+    color: black;
+}
+
+.default h1, .default a, .default p {
+    color: white;
+    text-decoration: none;
+}
+
+.default a:hover {
+    color: #55E6C1;
+    cursor: pointer;
+}
+
+.default input[type=text], .default input[type=url], .default input[type=email], .default input[type=tel] {
+    height: 40px;
+    width: 300px;
+    font-size: 1em;
+    border-radius: 10px;    
+    outline: none;
+    background: none;
+    color: white;
+    border: 2px solid lightskyblue;
+    transition: 0.25s;
+}
+
+.default input[type=text]:focus, .default input[type=url]:focus, .default input[type=email]:focus, .default input[type=tel]:focus {
+    width: 350px;
+    border: 2px solid #55E6C1;
+    font-size: 1.2em;
+}
+
+.default button {
+    margin: 20px;
+    width: 150px;
+    height: 45px;
+    border: 1px solid #55E6C1;
+    border-radius: 7.5px;
+    background: none;
+    color: white;
+    transition: 0.25s;
+    font-size: 1em;
+}
+
+.default button:hover {
+    width: 175px;
+    background: #55E6C1;
+    font-size: 1.2em;
+    cursor: pointer;
+}
