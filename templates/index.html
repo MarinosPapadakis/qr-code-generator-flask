@@ -12,11 +12,9 @@
                     <p>
                         QR Code Type:
                         <select name="qr_code" onchange="changeType(this)">
-                            <option value="text">Text</option>
-                            <option value="url">URL</option>
-                            <option value="email">Email</option>
-                            <option value="telephone">Phone</option>
-                            <option value="geo">Geolocation</option>
+                            {% for QR_Type in QR_Types %}
+                                <option value="{{QR_Type}}">{{QR_Type}}</option>
+                            {% endfor %}
                         </select>
                     </p>
                 </div>

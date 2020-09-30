@@ -16,6 +16,10 @@ app.config["SESSION_TYPE"] = "filesystem"
 def index():
 
 
+    # Define available QR Types
+    QR_Types = ["Text", "URL", "Email", "Telephone", "Geolocation"]
+
+
     # If request method is "POST"
     if request.method == "POST":
 
@@ -25,14 +29,14 @@ def index():
 
         # Check to see if user's input is valid
         if len(content) > 255:
-            return render_template("index.html", message="Length of text is too large.")
+            return render_template("index.html", QR_Types=QR_Types, message="Length of text is too large.")
 
         # Format QR Codes based on QR Type
-        if qr_type == "email":
+        if qr_type == "Email":
             content = f"mailto:{content}"
-        elif qr_type == "telephone":
+        elif qr_type == "Telephone":
             content = f"tel:{content}"
-        elif qr_type == "geo":
+        elif qr_type == "Geolocation":
             content = f"geo:{content}"
             
 
@@ -66,4 +70,4 @@ def index():
     else:
 
         # Render the html page
-        return render_template("index.html")
+        return render_template("index.html", QR_Types=QR_Types)
